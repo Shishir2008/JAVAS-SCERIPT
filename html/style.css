@@ -1,0 +1,81 @@
+ 
+body{
+  background: gray;
+}
+ 
+ .logo{
+   color: rgb(251, 250, 250);
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 500;
+ }
+ .navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    height: 50px;
+    justify-content: center;
+    
+ }
+ a{
+   position: relative;
+   cursor: pointer;
+   color: #efefee;
+   font-size: 28px;
+   padding: 0.5rem 1rem;
+   transition: color 0.25s;
+ }
+ a::after{
+   position: absolute;
+   content: "";
+   inset: 0;
+   background: white;
+   scale: 1 0;
+   z-index: -1;
+   transition: 0.45s;
+   border-radius: 10px;
+ }
+ a:hover{
+   color: black;
+ }
+ a:hover::after{
+   scale: 1 1;
+ }
+
+ /* .navbar a:hover,
+.navbar a.active{
+    color: #00abf0;
+} */
+ .header{
+    /* text-decoration: none;
+    display: flex;
+    justify-content: space-between; */
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* padding: 10px 10%; */
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+
+ }
+ .btn-box{
+  background: aqua;
+  color: white;
+  text-decoration: none;
+  box-sizing: border-box;
+  border: none;
+  transition: 0.45s;
+ }
+ .btn-box:hover {
+  transform: scale(1.1,1.1);
+ }
+
+ .btn-box:not(:hover) {
+  filter:blur(10px);
+  transform: scale(0.9,0.9);
+ }
